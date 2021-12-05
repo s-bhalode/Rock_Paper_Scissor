@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone_Paper_Scissor</title>
+
+    <!-- For favicon -->
+    <link rel="icon" type="image/icon" sizes="32x32" href="images/favicon.png">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/23952372db.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light" onload="preLoad()">
+    <section class="section_1" id="section_1">
+        <div class="welcome">
+            Welcome...
+        </div>
+        <div class="loading"><div class="loader" ></div>Loading</div>
+    </section>
+    <section class="section_2" id="section_2">
+        <div class="theme_section">
+            <div class="ml-5 theme">
+                Theme
+            </div>
+            <label class="theme_switch">
+                <i class="fas fa-adjust"></i>
+                <div>
+                    <input type="checkbox" name="theme"></input>
+                    <span class="slider round"></span>
+                </div>
+            </label>
+        </div>
+        <div class="container show_box">
+            <div class="content">
+                <span>ROCK</span>
+                <span>PAPER</span>
+                <span>SCISSOR</span>
+            </div>
+            <div class="score">
+                <span>SCORE</span>
+                <p id="scored">0</p>
+            </div>
+        </div>
+    </section>
+    <section class="section_3" id="section_3">
+        <div class="container">
+            <div class="choice_box">
+                <button class="icons rock pick" data-choice="rock">
+                    <img src="/images/rock.png">
+                </button>
+                <button class="icons paper pick" data-choice="paper">
+                    <img src="/images/paper.png">
+                </button>
+                <button class="icons scissors pick" data-choice="scissors">
+                    <img src="/images/scissors.png ">
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="section_4" id="section_4">
+        <div class="container result">
+            <div>
+                <h2>YOU PICKED</h2>
+                <span>
+                    <button class="icons rock" id="userPicked">
+                        <img src="/images/rock.png">
+                    </button>
+                </span>
+            </div>
+            <div>
+                <span id="lose_win"></span>
+                <button class="play_btn" id="playAgain">PLAY AGAIN</button>
+            </div>
+            <div>
+                <h2>SYSTEM PICKED</h2>
+                <span>
+                    <button class="icons scissors" id="computerPicked">
+                        <img src="/images/scissors.png">
+                    </button>
+                </span>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section_5" id="section_5">
+        <button class="rules" data-toggle="modal" data-target="#rulesModal">RULES</button>
+        <div class="modal fade" id="rulesModal" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="rulesModal">RULES</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/images/rulesModal.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
